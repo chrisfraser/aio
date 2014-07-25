@@ -1,17 +1,17 @@
 {
-  "name": "Aio",
-  "version": "1.2.1",
+  "name": "Gwaio",
+  "version": "1.0.0",
   "description": "A Bootstrap UI based theme for Ghost",
   "repository": {
     "type": "git",
-    "url": "https://nimaen@github.com/Nimaen/aio.git"
+    "url": "https://github.com/chrisfraser/aio.git"
   },
   "author": "bosc.arno@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Nimaen/aio/issues"
+    "url": "https://github.com/chrisfraser/aio/issues"
   },
-  "homepage": "https://github.com/Nimaen/aio",
+  "homepage": "https://github.com/chrisfraser/aio",
   "devDependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-clean": "^0.5.0",

@@ -6,10 +6,6 @@
 		<article class="{{post_class}}">
 			<div class="container post-container">
 				<header class="post-header">
-					<div class="post-tags">
-						{{tags}}
-					</div>
-
 					<h2 class="post-title">
 						<a href="{{@blog.url}}{{url}}">{{{title}}}</a>
 					</h2>
@@ -20,11 +16,21 @@
 					</time>
 
 					<a class="post-comments label label-info" href="{{@blog.url}}{{url}}#disqus_thread" data-disqus-identifier="{{id}}"></a>
-				</header>
+				</header> 
 
 				<section class="post-excerpt">
 					<p>{{excerpt}}&hellip;</p>
 				</section>
+
+				{{#if tags}}
+					<span class="post-tags">
+						<i class="fa fa-tags"></i>
+						{{#foreach tags}}
+						    <a class="label label-default" href="{{url}}">{{name}}</a>
+						{{/foreach}}
+					</span>
+				{{/if}}
+				
 			</div>
 		</article>
 

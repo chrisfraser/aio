@@ -30,11 +30,16 @@
 .post-comments {
 	display: inline-block;
 	vertical-align: middle;
+	padding-top: 0.3em;
 }
 
 .post-tags {
+	vertical-align: top;
 	font-family: @open-sans;
-	text-transform: uppercase;
+  	.label {
+		padding-top: 0.3em;
+		display: inline-block;
+  	}
 }
 
 .post-title {
@@ -66,6 +71,7 @@ h2.post-title {
 }
 
 .post-excerpt {
+	margin-bottom: 0.5em;
 	color: @post-excerpt-color;
 	padding: @post-excerpt-padding;
 	border-left: @post-excerpt-border-left;
@@ -78,6 +84,9 @@ h2.post-title {
 .post-excerpt,
 .post-content {
 	font-family: @open-sans;
+	h4{
+		margin-top: @line-height-computed;
+	}
 }
 
 .post-footer {
@@ -129,4 +138,8 @@ h2.post-title {
 	@media (max-width: @screen-xs-max) {
 		.center-block();
 	}
+}
+
+img[src$="#left"] {
+    margin-left: 0;
 }

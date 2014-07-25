@@ -74,24 +74,23 @@ module.exports = function (grunt) {
 			}
 		},
 		"rsync": {
-			"default": {
-				"options": {
-					"src": buildPath + "/",
-					"dest": "<%= localConfig.dest %>",
-					"host": "<%= localConfig.host %>",
-					"recursive": true,
-					"syncDest": true,
-					"exclude": [".git*"]
-				}
-			},
+		    "options": {
+		        "args": ["--verbose"],
+		        "exclude": [".git*","*.scss","node_modules"],
+		        "recursive": true
+		    },
 			"watch": {
 				"options": {
 					"src": buildPath + "/",
 					"dest": "<%= localConfig.dest %>",
-					"host": "<%= localConfig.host %>",
-					"recursive": true,
-					"syncDest": false,
-					"exclude": [".git*"]
+					"syncDest": true
+				}
+			},
+			"default": {
+				"options": {
+					"src": buildPath + "/",
+					"dest": "<%= localConfig.dest %>",
+					"syncDest": true
 				}
 			}
 		},

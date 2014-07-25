@@ -9,9 +9,14 @@
 
       <span class="post-meta">
         <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-        <span class="post-tags">
-	        {{tags prefix="on " separator=" | "}}
-        </span>
+        {{#if tags}}
+			<span class="post-tags">
+				<i class="fa fa-tags"></i>
+				{{#foreach tags}}
+				    <a class="label label-default" href="{{url}}">{{name}}</a>
+				{{/foreach}}
+			</span>
+		{{/if}}
       </span>
 
 			<section class="post-content">
